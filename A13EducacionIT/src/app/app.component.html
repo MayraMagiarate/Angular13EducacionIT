@@ -1,3 +1,12 @@
-<app-articulos-lista></app-articulos-lista>
+<div class="cabecera">
+  <h1>Angular 13 Educacion IT</h1>
+  <div class="botonera">
+    <button (click)="verTarj()">Ver Tarjeta Personal</button>
+    <button (click)="verArt()">Ver Articulos</button>
+  </div>
+ 
+</div>
+<app-tarjeta-personal *ngIf="tarjVisible"></app-tarjeta-personal>
+<app-articulos-lista *ngIf="artVisible"></app-articulos-lista>
 
 <router-outlet></router-outlet>

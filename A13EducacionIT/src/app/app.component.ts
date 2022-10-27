@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'A13EducacionIT';
+  tarjVisible=false;
+  artVisible=false;
+  verTarj(){
+    this.tarjVisible=true;
+    this.artVisible=false;
+  }
+  verArt(){
+    this.artVisible=true;
+    this.tarjVisible=false;
+  }
 }

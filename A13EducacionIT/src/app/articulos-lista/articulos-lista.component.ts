@@ -9,10 +9,17 @@ import { lista } from './mocklist';
 export class ArticulosListaComponent implements OnInit {
 
   constructor() { }
+
+
+
 articulo:Articulo={id:0,nombre:"mate de madera",descripcion:"capacidad 50ml",precio:450,stock:262};
 item=lista;
 onSelect(articulo:Articulo){
   console.log("se ha seleccionado el articulo id:"+articulo.id+" Nombre: "+articulo.nombre);
+}
+tarjVisible=false;
+verTarj(){
+  this.tarjVisible=true;
 }
   ngOnInit(): void {
   }
