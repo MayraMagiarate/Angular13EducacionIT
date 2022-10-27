@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Articulo } from '../articulo';
+import { lista } from './mocklist';
 @Component({
   selector: 'app-articulos-lista',
   templateUrl: './articulos-lista.component.html',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ArticulosListaComponent implements OnInit {
 
   constructor() { }
-  descripcion:string="Este es el componente ArticulosLista";
+articulo:Articulo={id:0,nombre:"mate de madera",descripcion:"capacidad 50ml",precio:450,stock:262};
+item=lista;
+onSelect(articulo:Articulo){
+  console.log("se ha seleccionado el articulo id:"+articulo.id+" Nombre: "+articulo.nombre);
+}
   ngOnInit(): void {
   }
 

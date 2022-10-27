@@ -1,1 +1,10 @@
-<h2>{{descripcion}}</h2>
+<h2>id:{{articulo.id}}<br>nombre:{{articulo.nombre}}<br>descripcion: {{articulo.descripcion}}<br>precio:{{articulo.precio}}<br>stock:{{articulo.stock}}</h2>
+
+<div class="articulo" *ngFor="let art of item">
+    <p>Id Articulo:{{art.id}}</p>
+    <p>Nombre:{{art.nombre}}</p>
+    <p>Descripcion:{{art.descripcion}}</p>
+    <p>Precio ${{art.precio}}</p>
+    <p>Stock: {{art.stock}} unidades</p>
+    <button (click)="onSelect(this.art)">Seleccionar</button>
+</div>
